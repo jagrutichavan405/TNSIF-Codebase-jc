@@ -1,7 +1,7 @@
 
 package com.tnsif.day1;
 public class DataTypeDemo{
- public static void main(String[] arg) {
+ public static void main(String[] arg) { 
 		 int value1 = 9/2;
 		 System.out.println(value1);
 		 
