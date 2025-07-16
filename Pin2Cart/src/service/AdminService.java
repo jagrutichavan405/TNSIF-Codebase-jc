@@ -4,7 +4,7 @@ package service;
 		import model.Product;
 		import model.ClickLog;
 
-		public class AdminService {
+		public class AdminService { //admin service
 
 		    public void viewFlaggedProducts(List<Product> products) {
 		        System.out.println("Flagged Products:");
@@ -14,7 +14,7 @@ package service;
 		            }
 		        }
 		    }
-
+//printing clicklogs
 		    public void viewClickLogs(List<ClickLog> logs) {
 		        System.out.println("Click Logs:");
 		        for (ClickLog log : logs) {

@@ -1,7 +1,7 @@
 package model;
 
-import java.util.List;
-import java.util.ArrayList;
+import java.util.List;// it is an interference
+import java.util.ArrayList; // this is a class base class
 
 public class Cart {
     private List<Product> items = new ArrayList<>();

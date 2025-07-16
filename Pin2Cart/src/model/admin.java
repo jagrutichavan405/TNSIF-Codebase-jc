@@ -2,8 +2,8 @@ package model;
 import java.util.List;
 import model.Product;
 
-
-public class admin extends User {
+//main admin class
+public class admin extends User {// used inheritence from user
     private int adminId;
 
     

@@ -28,10 +28,23 @@ public class Pin2CartApp {
             System.out.println("3. Exit");
 
             int choice = sc.nextInt();
+            sc.nextLine(); // clear buffer
 
             switch (choice) {
                 case 1 -> customerMenu();
-                case 2 -> adminMenu();
+                case 2 -> {
+                    System.out.println("Enter Admin Username:");
+                    String username = sc.nextLine();
+                    System.out.println("Enter Admin Password:");
+                    String password = sc.nextLine();
+
+                    if (username.equals("admin") && password.equals("admin123")) {
+                        System.out.println("✅ Admin login successful!");
+                        adminMenu();
+                    } else {
+                        System.out.println("❌ Incorrect credentials. Access denied.");
+                    }
+                }
                 case 3 -> {
                     System.out.println("Thank you for using Pin2Cart!");
                     return;
@@ -192,7 +205,6 @@ public class Pin2CartApp {
         }
     }
 
-    // ✅ Extract Pinterest image hash or pin ID
     public static String extractPinterestHash(String url) {
         if (url.contains("pinimg.com/")) {
             return url.substring(url.lastIndexOf("/") + 1).replace(".jpg", "");
